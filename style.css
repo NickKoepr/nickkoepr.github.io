@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+.header{
+      font-family: 'Roboto';
+      font-size: 22px;
+}
+
+.about, .projects{
+  font-family: 'Roboto';
+}
+
+.footer{
+  font-family: 'Roboto';
+}

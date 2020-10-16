@@ -1,177 +1,182 @@
-
-<!-- Ye i know, it's terrible :P-->
-<!-- NickKoepr site version 1.0-->
+<!-- Welcome to the code! -->
 <!-- Github: https://github.com/NickKoepr/nickkoepr.github.io -->
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
-    <title>NickKoepr</title>
-  </head>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>NickKoepr</title>
+	<style type="text/css">
+		
+	@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
 
-<!-- CSS -->
+	@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-  <style>
+	html{
+     scroll-behavior: smooth;
+	}
 
-@import url("https://fonts.googleapis.com/css?family=Roboto");
+	body {
+ 	font-family: Arial, Helvetica, sans-serif;
+ 	 margin: 0;
+	}
 
-html{
-      scroll-behavior: smooth;
-}
+	h3{
+		color: #555555;
+		font-family: 'Roboto', sans-serif;
+	}
 
-body{
-    margin: 0;
-}
+	h2{
+		color: #555555;
+		font-family: 'Roboto', sans-serif;
+		font-size: 21px;
+	}
 
-a{
-  color: #696969;
-  text-decoration: none;
-  font-size: 18px;
-}
+	h1{
+		color: #555555;
+		font-family: 'Roboto', sans-serif;
+		font-size: 28px;
+	}
 
-.header{
-    font-family: 'Roboto';
-    padding: 60px;
-    text-align: center;
-    background: #808080;
-    color: white;
-    font-size: 30px;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
+	.lines{
+		border: 2px solid #F9F9F9;
+	}
 
-.about, .projects, .links{
-  font-family: 'Roboto';
-  text-align: center;
-  color: #696969;
+	.menu {
+  	padding: 10px;
+  	text-align: center;
+  	font-family: 'Roboto', sans-serif;
 
-}
+	}
 
-.projects{
-  background: #EBECF0;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-}
 
-.sortingline{
-  background: #D3D3D3;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  color: #696969;
-}
-
-.footer{
-  font-family: 'Roboto';
-  background: #EBECF0;
-  padding: 5px;
-  color: #696969;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-
-} 
-
-.menu{
-  font-family: 'Roboto';
-  background: #C0C0C0;
-  padding: 10px;
-  color: #696969;
-  text-align: center;
-}
-
-.menu a{
+	.menu a{
     padding: 14px 20px;
-}
+    color: #555555;
+ 	text-decoration: none;
+	font-size: 18px;
+	}
 
-button{
-  border: none;
-  color: #696969;
-  background-color: #D3D3D3;
-  padding: 16px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 20px;
-  margin: 4px 2px;
-  transition-duration: 0.3s;
-  cursor: pointer;
-  border: 2px solid #696969;
-}
+	.menu a:hover{
+	color: #333333;
+ 	text-decoration: none;
+	}
 
-button:hover{
-  background-color: #696969;
-  color: white;
-}
+	.header {
+  	padding: 80px;
+  	background: #afbfd2;
+  	text-align: center;
+  	color: white;
+  	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
+	}
 
-  </style>
+	.middle{
+		text-align: center;
+	}
 
-<!-- Beginning website -->
+	.projects{
+		text-align: center;
+	}
 
-  <body>
+	.proline {
+		border: 3px solid #F9F9F9;
+	}
+
+	.footer{
+  	padding: 35px;
+  	text-align: center;
+  	color: #646464;
+  	background: #212121;
+  	color: #797a7e;		
+	}
+
+	.footer p{
+		font-family: 'Roboto', sans-serif;
+	}
+
+	.footer a{
+		color: #646464;
+		text-decoration: none;
+	}
+
+	.headertext {
+		height: 70px;
+		font-size: 50px;
+		text-align: center;
+		font-family: 'Fredoka One', cursive;
+		color: #01c5c4;
+	}
+
+	.button{
+	color: #555555;
+ 	text-decoration: none;
+	opacity: 0.6;
+  	transition: 0.3s;
+	}
+
+	.button:hover{
+	color: #333333;
+ 	text-decoration: none;
+	}
+
+	</style>
+</head>
+<body>
 
 <!-- Menu -->
-
-    <div class="menu">
-      <p>
-        <a href="#about">About me</a>
-        <a href="#projects">My projects</a>
-        <a href="#links">Links</a>
-      </p>
-    </div>
+<div class="menu">
+    <p>
+      <a href="#about">About me.</a>
+      <a href="#projects">My projects.</a>
+      <a href="#links">Links.</a>
+    </p>	
+</div>
 
 <!-- Header -->
+<div class="header">
+	<img src="NickKoeprLogo.png">
+</div>
 
-    <div class="header" id="header">
-        <br>
-          <h1>NickKoepr</h1>
-        <br>
-    </div>
+<!-- Middle -->
+<div class="middle" id="about">
+	<div class="headertext"><p>Hi!</p></div>
+	<hr class="lines">
+	<h2>Welcome on my page!</h2>
+	<br>
+</div>
 
-    <div class="about" id="about">
-      <br>
-        <h1>About me</h1>
-        <p>Hi i am Nick. I am 15 years old and make games.</p>
-      <br>
-    </div>
+<!-- Projects -->
+<div clas="projects" id="projects">
+	<div class="headertext"><p>My projects.</p></div>
+	<hr class="lines">
+	<br>
+	<p><center><img src="SortingLineLogo.png"></center></p>
+	<h1><center>SortingLine</center></h1>
+	<hr style="width:50%" class="proline">
+	<br>
+	<h2><center>In SortingLine, you need to sort the crates as quickly as possible! If you don't sort a crate properly, you die!</center></h2>
+	<h2><center><u><a target="_blank" href="https://nickkoepr.itch.io/sortingline" class="button">Go to the itch.io page.</a></u></center></h2>
+	<br>
+</div>
 
-<!-- projects -->
+<!-- Links -->
+<div class="links" id="links">
+	<div class="headertext"><p>Links.</p></div>
+	<hr class="lines">
+	<br>
+	<h2><center>Links to other website's:</center></h2>
+	<h2><center><u><a target="_blank" href="https://nickkoepr.itch.io/" class="button">nickkoepr.itch.io</a></u></center></h2>
+	<h2><center><u><a target="_blank" href="https://twitter.com/nickkoepr/" class="button">twitter.com/nickkoepr</a></u></center></h2>
+	<br>
+	<br>
+</div>
 
-   <div class="projects" id="projects">
-      <br>
-        <h1>My projects</h1>
-      <br>
+<!-- Footer -->
+<div class="footer">
+	<p>© NickKoepr</p>
+	<p>Contact? DM me on twitter: <a target="_blank" href="https://twitter.com/nickkoepr/">Twitter.com/nickkoepr</a></p>
+</div>
 
-<!-- Sortingline project-->
 
-        <div class="sortingline">
-          <br>
-            <h3>SortingLine</h3>
-            <p>Sort all crates so quickly as possible!</p>
-            <img src="https://i.imgur.com/hzTeRhO.png" alt="Sorting Line">
-            <br>
-            <a target="_blank" href="https://nickkoepr.itch.io/sortingline/"><button>Visit the itch.io page.</button></a>
-          <br>
-          <br>
-        </div>
-      <br>
-      <br>
-      <br>
-    </div>
- 
-<!--Links-->
 
-  <div class="links" id="links">
-    <br>
-      <h1>Links</h1>
-      <p>Links to other website's.</p>
-      <a target="_blank" href="https://twitter.com/nickkoepr">• Twitter</a>
-    <br>
-      <a target="_blank" href="https://nickkoepr.itch.io">• Itch.io</a>
-    <br>
-    <br>
-    <br>
-  </div>
-
-<!--Footer-->
-
-  <div class="footer">
-    <p>© NickKoepr</p>
-  </div>
-  </body>
+</body>
 </html>

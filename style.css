@@ -147,11 +147,13 @@ p {
     }
 
     .headermessage #wave {
+        margin-top: 50px;
+        margin-right: 300px;
         margin-bottom: 10px;
     }
 
     .headermessage h1 {
-        margin-top: auto;
+        
         font-size: 90px;
         margin-bottom: auto;
     }
@@ -163,14 +165,5 @@ p {
 
     .headermessage hr {
         margin-top: auto;
-    }
-}
-
-@media screen and (max-width:680px) {
-    .headermessage #wave {
-        margin-right: 200px;
-        margin-left: 15px;
-        width: 300px;
-        height: 300px;
     }
 }

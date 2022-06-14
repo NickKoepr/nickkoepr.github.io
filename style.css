@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+h1 {
+    font-weight: 400;
+    font-family: 'Roboto Mono', monospace;
+}
+
+p {
+    font-weight: 300;
+}
+
+.headermessage #wave {
+    font-size: 370px;
+    margin-top: auto;
+    margin-bottom: auto;
+    float: left;
+}
+
+.headermessage h1 {
+    margin-top: 150px;
+    font-size: 120px;
+    font-weight: 500;
+    margin-bottom: auto;
+}
+
+.headermessage #message {
+    margin-top: auto;
+    font-size: 45px;
+}   
+
+.headermessage hr {
+    margin-top: 150px;
+    width: 90%;
+    border: 3px solid rgba(190, 190, 190, 0.452);
+}
+
+#sectiontitle {
+    margin-top: 60px;
+    text-align: center;
+    font-size: 60px;
+}
+
+.projects hr {
+    width: 40%;
+    border: 3px solid rgba(190, 190, 190, 0.164);
+}
+
+.project {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.project h1 {
+    font-family: 'Roboto', sans-serif;
+    margin-top: 20px;
+    font-size: 40px;
+}
+
+.project p {
+    margin-top: auto;
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+
+.project a {
+    font-family: 'Roboto Mono', monospace;
+    display: block;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 12px;
+    transition-duration: 0.2s;
+    background-color: rgb(192, 192, 192);
+    color: rgb(43, 43, 43);
+    text-decoration: none;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 4px;
+}
+
+.project a:hover {
+    background-color: rgb(219, 219, 219);
+    color: rgb(141, 141, 141);
+}
+
+.project #normalbutton {
+    font-size: 20px;
+}
+
+.project #smallbutton {
+    font-size: 12px;
+}
+
+.links {
+    text-align: center;
+}
+
+.links hr {
+    width: 40%;
+    border: 3px solid rgba(190, 190, 190, 0.164);
+}
+
+.links svg{
+    transition-duration: 0.2s;
+    width: 70px;
+    height: 70px;
+    margin-left: 20px;
+    filter: invert(55%) sepia(2%) saturate(1%) hue-rotate(153deg) brightness(100%) contrast(90%);
+}
+
+.links svg:hover {
+    filter: invert(25%) sepia(5%) saturate(0%) hue-rotate(266deg) brightness(106%) contrast(92%);
+}
+
+.footer {
+    margin-top: 80px;
+    background-color: rgb(95, 95, 95);
+    width: 100%;
+    padding: 35px;
+    box-sizing: border-box;
+}
+
+.footer p {
+    text-align: center;
+    color: #c5c5c5;
+}
+
+@media screen and (max-width:800px) {
+
+    .menu a{
+        margin: 30px;
+    }
+    
+    .headermessage #wave {
+        font-size: 200px;
+        margin-bottom: auto;
+        text-align: center;
+        float: none;
+    }
+    
+    .headermessage h1 {
+        margin-top: auto;
+        font-size: 90px;
+        margin-bottom: auto;
+    }
+    
+    .headermessage #message {
+        margin-top: auto;
+        font-size: 40px;
+    }  
+
+    .headermessage hr {
+        margin-top: auto;
+    }
+}

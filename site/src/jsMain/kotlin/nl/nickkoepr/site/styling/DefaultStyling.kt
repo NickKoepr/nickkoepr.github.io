@@ -11,9 +11,11 @@ import org.jetbrains.compose.web.css.CSSColorValue
 // Custom CSS properties
 val backgroundColor by StyleVariable<CSSColorValue>()
 val fontColor by StyleVariable<CSSColorValue>()
+val linkColor by StyleVariable<CSSColorValue>()
 val fontFamily by StyleVariable<String>()
 
 val BACKGROUND_COLOR = Color.Companion.rgb(37, 37 , 37)
+val LINK_COLOR = Color.Companion.rgb(255, 255, 102)
 val FONT_COLOR = Colors.White
 const val FONT_FAMILY = "Source Code Pro"
 
@@ -23,5 +25,6 @@ val RootStyle by ComponentStyle {
             .setVariable(backgroundColor, BACKGROUND_COLOR)
             .setVariable(fontColor, FONT_COLOR)
             .setVariable(fontFamily, FONT_FAMILY)
+            .setVariable(linkColor, LINK_COLOR)
     }
 }

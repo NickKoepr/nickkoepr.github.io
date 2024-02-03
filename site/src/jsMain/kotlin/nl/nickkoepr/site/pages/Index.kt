@@ -8,6 +8,7 @@ import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.core.Page
 import com.varabyte.kobweb.silk.components.style.ComponentStyle
 import com.varabyte.kobweb.silk.components.style.toModifier
+import nl.nickkoepr.site.components.link.DefaultLink
 import nl.nickkoepr.site.components.text.PageTitle
 import nl.nickkoepr.site.components.text.introduction.HelloMessage
 import nl.nickkoepr.site.components.text.introduction.IntroductionColumn
@@ -46,5 +47,6 @@ fun HomePage(modifier: Modifier = RootStyle.toModifier()) {
                 "Studying at the University of applied sciences Utrecht. "
             )
         }
+        DefaultLink(linkText = "test link", link = "test", openNewWindow = true)
     }
 }

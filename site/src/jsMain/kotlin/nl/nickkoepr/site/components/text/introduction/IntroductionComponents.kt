@@ -2,15 +2,16 @@ package nl.nickkoepr.site.components.text.introduction
 
 import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.compose.css.FontWeight
-import com.varabyte.kobweb.compose.css.fontWeight
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.fontSize
+import com.varabyte.kobweb.compose.ui.modifiers.fontWeight
+import com.varabyte.kobweb.compose.ui.modifiers.margin
 import com.varabyte.kobweb.compose.ui.modifiers.padding
+import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.silk.components.style.ComponentStyle
 import com.varabyte.kobweb.silk.components.style.toModifier
-import org.jetbrains.compose.web.css.margin
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.H2
 import org.jetbrains.compose.web.dom.P
@@ -42,12 +43,7 @@ val HelloMessageStyle by ComponentStyle {
 @Composable
 fun HelloMessage(text: String, modifier: Modifier = Modifier) {
     Box(HelloMessageStyle.toModifier().then(modifier)) {
-        H2(attrs = {
-            style {
-                margin(0.px)
-                fontWeight(FontWeight.Normal)
-            }
-        }) {
+        H2(attrs = Modifier.margin(0.px).fontWeight(FontWeight.Normal).toAttrs()) {
             Text(text)
         }
     }
@@ -68,11 +64,7 @@ val IntroductionMessageStyle by ComponentStyle {
 @Composable
 fun IntroductionText(introText: String, modifier: Modifier = Modifier) {
     Box(modifier = IntroductionMessageStyle.toModifier().then(modifier)) {
-        P(attrs = {
-            style {
-                margin(0.px)
-            }
-        }) {
+        P(attrs = Modifier.margin(0.px).toAttrs()) {
             Text(introText)
         }
     }

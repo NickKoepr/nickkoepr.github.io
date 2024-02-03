@@ -8,9 +8,10 @@ import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.ariaHidden
 import com.varabyte.kobweb.compose.ui.modifiers.fontSize
 import com.varabyte.kobweb.compose.ui.modifiers.fontWeight
+import com.varabyte.kobweb.compose.ui.modifiers.margin
+import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.silk.components.style.ComponentStyle
 import com.varabyte.kobweb.silk.components.style.toModifier
-import org.jetbrains.compose.web.css.margin
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.Div
 import org.jetbrains.compose.web.dom.H1
@@ -30,11 +31,7 @@ val PageTitleStyle by ComponentStyle {
 @Composable
 fun PageTitle(title: String, modifier: Modifier = Modifier) {
     Column(modifier = PageTitleStyle.toModifier().then(modifier)) {
-        H1(attrs = {
-            style {
-                margin(0.px)
-            }
-        }) {
+        H1(attrs = Modifier.margin(0.px).toAttrs()) {
             Text(title)
         }
         HeaderUnderline()

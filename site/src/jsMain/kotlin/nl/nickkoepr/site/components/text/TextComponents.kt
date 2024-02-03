@@ -24,10 +24,12 @@ val PageTitleStyle by ComponentStyle {
 
 /**
  * Composable that creates a [H1] element with a [HeaderUnderline].
+ *
+ * @param title Page title that will be displayed in the h1.
  */
 @Composable
 fun PageTitle(title: String, modifier: Modifier = Modifier) {
-    Column(modifier = modifier.then(PageTitleStyle.toModifier())) {
+    Column(modifier = PageTitleStyle.toModifier().then(modifier)) {
         H1(attrs = {
             style {
                 margin(0.px)

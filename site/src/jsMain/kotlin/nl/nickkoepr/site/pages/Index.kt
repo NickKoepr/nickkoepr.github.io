@@ -1,15 +1,17 @@
 package nl.nickkoepr.site.pages
 
 import androidx.compose.runtime.Composable
-import com.varabyte.kobweb.compose.foundation.layout.Box
-import com.varabyte.kobweb.compose.foundation.layout.Row
-import com.varabyte.kobweb.compose.ui.Alignment
+import com.varabyte.kobweb.compose.foundation.layout.Arrangement
+import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.core.Page
 import com.varabyte.kobweb.silk.components.style.ComponentStyle
 import com.varabyte.kobweb.silk.components.style.toModifier
 import nl.nickkoepr.site.components.text.PageTitle
+import nl.nickkoepr.site.components.text.introduction.HelloMessage
+import nl.nickkoepr.site.components.text.introduction.IntroductionColumn
+import nl.nickkoepr.site.components.text.introduction.IntroductionText
 import nl.nickkoepr.site.styling.RootStyle
 import nl.nickkoepr.site.styling.backgroundColor
 import nl.nickkoepr.site.styling.fontColor
@@ -33,7 +35,16 @@ val HomePageStyle by ComponentStyle {
 @Page
 @Composable
 fun HomePage(modifier: Modifier = RootStyle.toModifier()) {
-    Box(modifier = modifier.then(HomePageStyle.toModifier()), contentAlignment = Alignment.TopStart) {
+    Column(modifier = modifier.then(HomePageStyle.toModifier()), verticalArrangement = Arrangement.Top) {
         PageTitle("NickKoepr")
+        IntroductionColumn {
+            HelloMessage("Hello!")
+            IntroductionText(
+                "I am Nick, 19 year old software developer from the Netherlands"
+            )
+            IntroductionText(
+                "Studying at the University of applied sciences Utrecht. "
+            )
+        }
     }
 }

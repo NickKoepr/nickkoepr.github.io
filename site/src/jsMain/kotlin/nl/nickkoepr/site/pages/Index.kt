@@ -8,16 +8,19 @@ import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.core.Page
 import com.varabyte.kobweb.silk.components.style.ComponentStyle
 import com.varabyte.kobweb.silk.components.style.toModifier
-import nl.nickkoepr.site.components.link.DefaultLink
+import nl.nickkoepr.site.components.navigation.NavigationBar
 import nl.nickkoepr.site.components.text.PageTitle
 import nl.nickkoepr.site.components.text.introduction.HelloMessage
 import nl.nickkoepr.site.components.text.introduction.IntroductionColumn
 import nl.nickkoepr.site.components.text.introduction.IntroductionText
+import nl.nickkoepr.site.domain.navigation.NavigationItem
 import nl.nickkoepr.site.styling.RootStyle
 import nl.nickkoepr.site.styling.backgroundColor
 import nl.nickkoepr.site.styling.fontColor
 import nl.nickkoepr.site.styling.fontFamily
 import org.jetbrains.compose.web.css.px
+import org.jetbrains.compose.web.dom.Header
+import org.jetbrains.compose.web.dom.Main
 
 val HomePageStyle by ComponentStyle {
     base {
@@ -37,16 +40,28 @@ val HomePageStyle by ComponentStyle {
 @Composable
 fun HomePage(modifier: Modifier = RootStyle.toModifier()) {
     Column(modifier = modifier.then(HomePageStyle.toModifier()), verticalArrangement = Arrangement.Top) {
-        PageTitle("NickKoepr")
-        IntroductionColumn {
-            HelloMessage("Hello!")
-            IntroductionText(
-                "I am Nick, 19 year old software developer from the Netherlands"
-            )
-            IntroductionText(
-                "Studying at the University of applied sciences Utrecht. "
+        Header {
+            PageTitle("NickKoepr")
+
+            NavigationBar(
+                navigationItems = listOf(
+                    NavigationItem(navigationName = "hello", pageLocation = "hello"),
+                    NavigationItem(navigationName = "project", pageLocation = "project"),
+                    NavigationItem(navigationName = "contact", pageLocation = "contact")
+                )
             )
         }
-        DefaultLink(linkText = "test link", link = "test", openNewWindow = true)
+
+        Main {
+            IntroductionColumn(modifier = Modifier.padding { top(30.px) }) {
+                HelloMessage("Hello!")
+                IntroductionText(
+                    "I am Nick, 19 year old software developer from the Netherlands"
+                )
+                IntroductionText(
+                    "Studying at the University of applied sciences Utrecht. "
+                )
+            }
+        }
     }
 }

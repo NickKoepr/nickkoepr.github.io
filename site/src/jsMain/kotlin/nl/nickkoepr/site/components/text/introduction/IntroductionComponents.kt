@@ -5,10 +5,7 @@ import com.varabyte.kobweb.compose.css.FontWeight
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.ui.Modifier
-import com.varabyte.kobweb.compose.ui.modifiers.fontSize
-import com.varabyte.kobweb.compose.ui.modifiers.fontWeight
-import com.varabyte.kobweb.compose.ui.modifiers.margin
-import com.varabyte.kobweb.compose.ui.modifiers.padding
+import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.silk.components.style.ComponentStyle
 import com.varabyte.kobweb.silk.components.style.toModifier
@@ -23,7 +20,7 @@ import org.jetbrains.compose.web.dom.Text
  */
 @Composable
 fun IntroductionColumn(modifier: Modifier = Modifier, content: @Composable () -> Unit) {
-    Column(modifier = modifier) {
+    Column(modifier = modifier.id("hello")) {
         content()
     }
 }

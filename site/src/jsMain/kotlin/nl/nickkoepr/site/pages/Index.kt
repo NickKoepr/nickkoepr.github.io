@@ -8,11 +8,13 @@ import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.core.Page
 import com.varabyte.kobweb.silk.components.style.ComponentStyle
 import com.varabyte.kobweb.silk.components.style.toModifier
+import nl.nickkoepr.site.components.link.LinkWithIconList
 import nl.nickkoepr.site.components.navigation.NavigationBar
 import nl.nickkoepr.site.components.text.PageTitle
 import nl.nickkoepr.site.components.text.introduction.HelloMessage
 import nl.nickkoepr.site.components.text.introduction.IntroductionColumn
 import nl.nickkoepr.site.components.text.introduction.IntroductionText
+import nl.nickkoepr.site.domain.link.LinkWithIcon
 import nl.nickkoepr.site.domain.navigation.NavigationItem
 import nl.nickkoepr.site.styling.RootStyle
 import nl.nickkoepr.site.styling.backgroundColor
@@ -62,6 +64,22 @@ fun HomePage(modifier: Modifier = RootStyle.toModifier()) {
                     "Studying at the University of applied sciences Utrecht. "
                 )
             }
+            LinkWithIconList(
+                listOf(
+                    LinkWithIcon(
+                        iconLocation = "/icons/linkedin.svg",
+                        iconAlt = "Linkedin",
+                        linkText = "Nick Kuiper",
+                        link = "https://www.linkedin.com/in/nick-kuiper-010b75266/"
+                    ),
+                    LinkWithIcon(
+                        iconLocation = "/icons/github.svg",
+                        iconAlt = "GitHub",
+                        linkText = "NickKoepr",
+                        link = "https://github.com/nickkoepr/"
+                    )
+                )
+            )
         }
     }
 }

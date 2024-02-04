@@ -1,26 +1,18 @@
 package nl.nickkoepr.site.components.navigation
 
 import androidx.compose.runtime.Composable
-import com.varabyte.kobweb.compose.css.CSSFloat
-import com.varabyte.kobweb.compose.css.ListStyleType
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.ui.Modifier
-import com.varabyte.kobweb.compose.ui.modifiers.*
+import com.varabyte.kobweb.compose.ui.modifiers.fontSize
 import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.silk.components.style.ComponentStyle
 import com.varabyte.kobweb.silk.components.style.toModifier
 import nl.nickkoepr.site.components.link.DefaultLink
 import nl.nickkoepr.site.domain.navigation.NavigationItem
+import nl.nickkoepr.site.list.HorizontalLi
+import nl.nickkoepr.site.list.HorizontalUl
 import org.jetbrains.compose.web.css.px
-import org.jetbrains.compose.web.dom.Li
 import org.jetbrains.compose.web.dom.Nav
-import org.jetbrains.compose.web.dom.Ul
-
-val NavigationItemsStyle by ComponentStyle {
-    base {
-        Modifier.listStyle(ListStyleType.None).padding(0.px)
-    }
-}
 
 /**
  * Composable that creates a navigation bar with the [Nav] HTML element from the given [navigationItems].
@@ -30,9 +22,9 @@ val NavigationItemsStyle by ComponentStyle {
 @Composable
 fun NavigationBar(navigationItems: List<NavigationItem>, modifier: Modifier = Modifier) {
     Nav(attrs = modifier.toAttrs()) {
-        Ul(attrs = NavigationItemsStyle.toModifier().toAttrs()) {
+        HorizontalUl {
             navigationItems.forEach { item ->
-                Li(attrs = Modifier.float(CSSFloat.Left).toAttrs()) {
+                HorizontalLi {
                     NavigationLink(navigationName = item.navigationName, pageLocation = item.pageLocation)
                 }
             }
@@ -42,7 +34,7 @@ fun NavigationBar(navigationItems: List<NavigationItem>, modifier: Modifier = Mo
 
 val NavigationItemStyle by ComponentStyle {
     base {
-        Modifier.padding { right(10.px) }.fontSize(18.px)
+        Modifier.fontSize(18.px)
     }
 }
 

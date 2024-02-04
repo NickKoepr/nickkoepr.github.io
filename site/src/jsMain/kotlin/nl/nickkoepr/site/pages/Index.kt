@@ -8,12 +8,16 @@ import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.core.Page
 import com.varabyte.kobweb.silk.components.style.ComponentStyle
 import com.varabyte.kobweb.silk.components.style.toModifier
+import nl.nickkoepr.site.components.experience.ExperienceCardList
+import nl.nickkoepr.site.components.experience.ExperienceColumn
 import nl.nickkoepr.site.components.link.LinkWithIconList
 import nl.nickkoepr.site.components.navigation.NavigationBar
 import nl.nickkoepr.site.components.text.PageTitle
+import nl.nickkoepr.site.components.text.experience.ExperienceTitle
 import nl.nickkoepr.site.components.text.introduction.HelloMessage
 import nl.nickkoepr.site.components.text.introduction.IntroductionColumn
 import nl.nickkoepr.site.components.text.introduction.IntroductionText
+import nl.nickkoepr.site.domain.experience.Experience
 import nl.nickkoepr.site.domain.link.LinkWithIcon
 import nl.nickkoepr.site.domain.navigation.NavigationItem
 import nl.nickkoepr.site.styling.RootStyle
@@ -63,23 +67,40 @@ fun HomePage(modifier: Modifier = RootStyle.toModifier()) {
                 IntroductionText(
                     "Studying at the University of applied sciences Utrecht. "
                 )
-            }
-            LinkWithIconList(
-                listOf(
-                    LinkWithIcon(
-                        iconLocation = "/icons/linkedin.svg",
-                        iconAlt = "Linkedin",
-                        linkText = "Nick Kuiper",
-                        link = "https://www.linkedin.com/in/nick-kuiper-010b75266/"
-                    ),
-                    LinkWithIcon(
-                        iconLocation = "/icons/github.svg",
-                        iconAlt = "GitHub",
-                        linkText = "NickKoepr",
-                        link = "https://github.com/nickkoepr/"
+
+                LinkWithIconList(
+                    listOf(
+                        LinkWithIcon(
+                            iconLocation = "/icons/linkedin.svg",
+                            iconAlt = "Linkedin",
+                            linkText = "Nick Kuiper",
+                            link = "https://www.linkedin.com/in/nick-kuiper-010b75266/"
+                        ),
+                        LinkWithIcon(
+                            iconLocation = "/icons/github.svg",
+                            iconAlt = "GitHub",
+                            linkText = "NickKoepr",
+                            link = "https://github.com/nickkoepr/"
+                        )
                     )
                 )
-            )
+            }
+
+            ExperienceColumn(modifier = Modifier.padding { top(20.px) }) {
+                ExperienceTitle("Experience with")
+
+                ExperienceCardList(
+                    listOf(
+                        Experience(name = "Android\nStudio", iconLocation = "/icons/experience/androidstudio.svg"),
+                        Experience(name = "Python", iconLocation = "/icons/experience/python.svg"),
+                        Experience(name = "Figma", iconLocation = "/icons/experience/figma.svg"),
+                        Experience(name = "Intellij\nIDEA", iconLocation = "/icons/experience/intellijidea.svg"),
+                        Experience(name = "Kotlin", iconLocation = "/icons/experience/kotlin.svg"),
+                        Experience(name = "Git", iconLocation = "/icons/experience/git.svg"),
+                    ),
+                    modifier = Modifier.margin { left(10.px) }
+                )
+            }
         }
     }
 }

@@ -1,4 +1,4 @@
-# NickKoepr site
+# NickKoepr.nl
 
 This is the repository for the website https://nickkoepr.nl/
 

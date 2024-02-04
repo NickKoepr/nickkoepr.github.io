@@ -15,8 +15,8 @@ import com.varabyte.kobweb.silk.components.graphics.Image
 import com.varabyte.kobweb.silk.components.style.ComponentStyle
 import com.varabyte.kobweb.silk.components.style.toAttrs
 import nl.nickkoepr.site.domain.link.LinkWithIcon
-import nl.nickkoepr.site.list.HorizontalLi
-import nl.nickkoepr.site.list.HorizontalUl
+import nl.nickkoepr.site.components.list.HorizontalLi
+import nl.nickkoepr.site.components.list.HorizontalUl
 import nl.nickkoepr.site.styling.linkColor
 import org.jetbrains.compose.web.attributes.ATarget
 import org.jetbrains.compose.web.attributes.target

@@ -9,8 +9,8 @@ import com.varabyte.kobweb.silk.components.style.ComponentStyle
 import com.varabyte.kobweb.silk.components.style.toModifier
 import nl.nickkoepr.site.components.link.DefaultLink
 import nl.nickkoepr.site.domain.navigation.NavigationItem
-import nl.nickkoepr.site.list.HorizontalLi
-import nl.nickkoepr.site.list.HorizontalUl
+import nl.nickkoepr.site.components.list.HorizontalLi
+import nl.nickkoepr.site.components.list.HorizontalUl
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.Nav
 

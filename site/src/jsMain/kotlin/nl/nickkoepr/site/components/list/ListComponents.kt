@@ -1,4 +1,4 @@
-package nl.nickkoepr.site.list
+package nl.nickkoepr.site.components.list
 
 import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.compose.css.CSSFloat

@@ -113,6 +113,9 @@ fun HomePage(modifier: Modifier = RootStyle.toModifier()) {
                         Experience(name = "Intellij\nIDEA", iconLocation = "/icons/experience/intellijidea.svg"),
                         Experience(name = "Kotlin", iconLocation = "/icons/experience/kotlin.svg"),
                         Experience(name = "Git", iconLocation = "/icons/experience/git.svg"),
+                        Experience(name = "Java", iconLocation = "/icons/experience/java.svg"),
+                        Experience(name = "Maven", iconLocation = "/icons/experience/maven.svg"),
+                        Experience(name = "Gradle", iconLocation = "/icons/experience/gradle.svg")
                     ),
                     modifier = Modifier.margin { left(10.px) }
                 )

@@ -1,7 +1,6 @@
 package nl.nickkoepr.site.pages
 
 import androidx.compose.runtime.Composable
-import com.varabyte.kobweb.compose.css.ScrollBehavior
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.ui.Alignment
@@ -59,7 +58,7 @@ fun HomePage(modifier: Modifier = RootStyle.toModifier()) {
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         Header {
-            PageTitle("NickKoepr")
+            PageTitle("Nick Kuiper")
 
             NavigationBar(
                 navigationItems = listOf(
@@ -74,12 +73,15 @@ fun HomePage(modifier: Modifier = RootStyle.toModifier()) {
             IntroductionColumn(modifier = Modifier.padding { top(30.px) }) {
                 HelloMessage("Hello!")
                 IntroductionText(
-                    "I am Nick Kuiper," +
+                    "I am Nick," +
                             " ${js("Math.floor(Math.abs(new Date() - new Date(\"12/25/2004\")) / (1000 * 60 * 60 * 24 * 365))")} " +
-                            "year old software developer from the Netherlands"
+                            "year old software developer from the Netherlands."
                 )
                 IntroductionText(
-                    "Studying at the University of applied sciences Utrecht. "
+                    "Studying at the University of applied sciences Utrecht."
+                )
+                IntroductionText(
+                    "Mostly interesting in Android and backend development."
                 )
 
                 LinkWithIconList(

@@ -67,7 +67,9 @@ fun HomePage(modifier: Modifier = RootStyle.toModifier()) {
             IntroductionColumn(modifier = Modifier.padding { top(30.px) }) {
                 HelloMessage("Hello!")
                 IntroductionText(
-                    "I am Nick, 19 year old software developer from the Netherlands"
+                    "I am Nick Kuiper," +
+                            " ${js("Math.floor(Math.abs(new Date() - new Date(\"12/25/2004\")) / (1000 * 60 * 60 * 24 * 365))")} " +
+                            "year old software developer from the Netherlands"
                 )
                 IntroductionText(
                     "Studying at the University of applied sciences Utrecht. "

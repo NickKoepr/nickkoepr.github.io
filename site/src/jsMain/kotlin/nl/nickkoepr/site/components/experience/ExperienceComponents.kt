@@ -19,20 +19,13 @@ import org.jetbrains.compose.web.dom.Div
 import org.jetbrains.compose.web.dom.P
 import org.jetbrains.compose.web.dom.Text
 
-val ExperienceCardStyle by ComponentStyle {
-    base {
-        // Experience card has a fixed size, because of the size of the experience label.
-        Modifier.width(40.px).height(40.px).margin { bottom(65.px) }
-    }
-}
-
 /**
  * Experience card that combines the [ExperienceIcon] and the [ExperienceLabel].
  */
 @Composable
 fun ExperienceCard(name: String, iconLocation: String, modifier: Modifier = Modifier) {
     Column(
-        modifier = ExperienceCardStyle.toModifier().then(modifier),
+        modifier = modifier,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         ExperienceIcon(iconLocation = iconLocation)
@@ -88,7 +81,7 @@ fun ExperienceCardList(experiences: List<Experience>, modifier: Modifier = Modif
     HorizontalUl(modifier = modifier) {
         experiences.forEach { experience ->
             HorizontalLi {
-                ExperienceCard(experience.name, experience.iconLocation, modifier = Modifier.margin { right(50.px) })
+                ExperienceCard(experience.name, experience.iconLocation, modifier = Modifier.margin { right(10.px) })
             }
         }
     }

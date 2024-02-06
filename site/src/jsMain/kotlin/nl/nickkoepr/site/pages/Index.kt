@@ -1,6 +1,7 @@
 package nl.nickkoepr.site.pages
 
 import androidx.compose.runtime.Composable
+import com.varabyte.kobweb.compose.css.ScrollBehavior
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.ui.Alignment
@@ -13,7 +14,12 @@ import nl.nickkoepr.site.components.experience.ExperienceCardList
 import nl.nickkoepr.site.components.experience.ExperienceColumn
 import nl.nickkoepr.site.components.link.LinkWithIconList
 import nl.nickkoepr.site.components.navigation.NavigationBar
+import nl.nickkoepr.site.components.projects.ProjectsColumn
+import nl.nickkoepr.site.components.projects.card.BigProjectCardLink
+import nl.nickkoepr.site.components.projects.card.ProjectList
+import nl.nickkoepr.site.components.projects.card.SmallProjectCardLink
 import nl.nickkoepr.site.components.text.PageTitle
+import nl.nickkoepr.site.components.text.SectionTitle
 import nl.nickkoepr.site.components.text.experience.ExperienceTitle
 import nl.nickkoepr.site.components.text.introduction.HelloMessage
 import nl.nickkoepr.site.components.text.introduction.IntroductionColumn
@@ -21,6 +27,7 @@ import nl.nickkoepr.site.components.text.introduction.IntroductionText
 import nl.nickkoepr.site.domain.experience.Experience
 import nl.nickkoepr.site.domain.link.LinkWithIcon
 import nl.nickkoepr.site.domain.navigation.NavigationItem
+import nl.nickkoepr.site.domain.project.Project
 import nl.nickkoepr.site.styling.RootStyle
 import nl.nickkoepr.site.styling.backgroundColor
 import nl.nickkoepr.site.styling.fontColor
@@ -57,7 +64,7 @@ fun HomePage(modifier: Modifier = RootStyle.toModifier()) {
             NavigationBar(
                 navigationItems = listOf(
                     NavigationItem(navigationName = "hello", pageLocation = "hello"),
-                    NavigationItem(navigationName = "project", pageLocation = "project"),
+                    NavigationItem(navigationName = "projects", pageLocation = "projects"),
                     NavigationItem(navigationName = "contact", pageLocation = "contact")
                 )
             )
@@ -107,6 +114,50 @@ fun HomePage(modifier: Modifier = RootStyle.toModifier()) {
                     ),
                     modifier = Modifier.margin { left(10.px) }
                 )
+            }
+
+            ProjectsColumn(
+                modifier = Modifier.padding {
+                    top(30.px)
+                }
+            ) {
+                SectionTitle("Projects", modifier = Modifier.padding { bottom(20.px) })
+                ProjectList(listOf(
+                    Project(
+                        projectImageLocation = "/images/projects/bored_logo.webp",
+                        projectTitle = "Bored",
+                        projectDescription = "Android app that combats your boredom",
+                        projectLinks = {
+                            BigProjectCardLink(
+                                linkText = "find on GitHub",
+                                link = "https://github.com/NickKoepr/Bored"
+                            )
+                        }
+                    )
+                    ,Project(
+                        projectImageLocation = "/images/projects/tictactoe_logo.jpg",
+                        projectTitle = "TicTacToe",
+                        projectDescription = "Play Tic Tac Toe with your friends on Discord with the TicTacToe Discord bot!",
+                        projectLinks = {
+                            BigProjectCardLink(
+                                linkText = "invite the bot",
+                                link = "https://top.gg/bot/914110118998732811"
+                            )
+                            BigProjectCardLink(
+                                linkText = "source code on GitHub",
+                                link = "https://github.com/NickKoepr/TicTacToe-V2"
+                            )
+                            SmallProjectCardLink(
+                                linkText = "privacy policy",
+                                link = "https://docs.google.com/document/d/e/2PACX-1vR7ZV1pUrErWNUH0sY_8KbZN2s3meKM71wKvtL5cwFQ0V6-utx2PW0GvLUoNCccqni52Z4fxgoGWWh0/pub"
+                            )
+                            SmallProjectCardLink(
+                                linkText = "terms of service",
+                                link = "https://docs.google.com/document/d/e/2PACX-1vQQ0nMg0msUX2CCxmj47ZDYRU4SMfCf0R7hoF61N_3vfKAmJyUw7uQUe90Jfz8e613xogqsvrUKYp91/pub"
+                            )
+                        }
+                    )
+                ))
             }
         }
     }

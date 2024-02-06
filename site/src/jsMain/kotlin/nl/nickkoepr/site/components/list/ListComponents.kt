@@ -1,24 +1,24 @@
 package nl.nickkoepr.site.components.list
 
 import androidx.compose.runtime.Composable
-import com.varabyte.kobweb.compose.css.CSSFloat
 import com.varabyte.kobweb.compose.css.ListStyleType
+import com.varabyte.kobweb.compose.css.TextAlign
 import com.varabyte.kobweb.compose.ui.Modifier
-import com.varabyte.kobweb.compose.ui.modifiers.flexWrap
-import com.varabyte.kobweb.compose.ui.modifiers.float
+import com.varabyte.kobweb.compose.ui.modifiers.display
 import com.varabyte.kobweb.compose.ui.modifiers.listStyle
 import com.varabyte.kobweb.compose.ui.modifiers.padding
+import com.varabyte.kobweb.compose.ui.modifiers.textAlign
 import com.varabyte.kobweb.compose.ui.toAttrs
 import com.varabyte.kobweb.silk.components.style.ComponentStyle
 import com.varabyte.kobweb.silk.components.style.toModifier
-import org.jetbrains.compose.web.css.FlexWrap
+import org.jetbrains.compose.web.css.DisplayStyle
 import org.jetbrains.compose.web.css.px
 import org.jetbrains.compose.web.dom.Li
 import org.jetbrains.compose.web.dom.Ul
 
 val HorizontalUlStyle by ComponentStyle {
     base {
-        Modifier.flexWrap(FlexWrap.Wrap).listStyle(ListStyleType.None).padding(0.px)
+        Modifier.listStyle(ListStyleType.None).textAlign(TextAlign.Center).padding(0.px)
     }
 }
 
@@ -37,7 +37,10 @@ fun HorizontalUl(modifier: Modifier = Modifier, content: @Composable () -> Unit)
 
 val HorizontalLiStyle by ComponentStyle {
     base {
-        Modifier.float(CSSFloat.Left).padding { right(13.px) }
+        Modifier.display(DisplayStyle.InlineBlock).padding {
+            right(13.px)
+            top(5.px)
+        }
     }
 }
 

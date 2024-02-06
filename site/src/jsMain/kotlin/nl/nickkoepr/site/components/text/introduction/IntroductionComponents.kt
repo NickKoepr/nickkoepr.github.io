@@ -2,8 +2,10 @@ package nl.nickkoepr.site.components.text.introduction
 
 import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.compose.css.FontWeight
+import com.varabyte.kobweb.compose.css.TextAlign
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Column
+import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.compose.ui.toAttrs
@@ -20,7 +22,7 @@ import org.jetbrains.compose.web.dom.Text
  */
 @Composable
 fun IntroductionColumn(modifier: Modifier = Modifier, content: @Composable () -> Unit) {
-    Column(modifier = modifier.id("hello")) {
+    Column(modifier = modifier.id("hello"), horizontalAlignment = Alignment.CenterHorizontally) {
         content()
     }
 }
@@ -48,7 +50,7 @@ fun HelloMessage(text: String, modifier: Modifier = Modifier) {
 
 val IntroductionMessageStyle by ComponentStyle {
     base {
-        Modifier.fontSize(16.px)
+        Modifier.fontSize(16.px).textAlign(TextAlign.Center)
     }
 }
 

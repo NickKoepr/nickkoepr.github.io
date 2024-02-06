@@ -3,6 +3,7 @@ package nl.nickkoepr.site.pages
 import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Column
+import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.core.Page
@@ -45,7 +46,11 @@ val HomePageStyle by ComponentStyle {
 @Page
 @Composable
 fun HomePage(modifier: Modifier = RootStyle.toModifier()) {
-    Column(modifier = modifier.then(HomePageStyle.toModifier()), verticalArrangement = Arrangement.Top) {
+    Column(
+        modifier = modifier.then(HomePageStyle.toModifier()),
+        verticalArrangement = Arrangement.Top,
+        horizontalAlignment = Alignment.CenterHorizontally
+    ) {
         Header {
             PageTitle("NickKoepr")
 

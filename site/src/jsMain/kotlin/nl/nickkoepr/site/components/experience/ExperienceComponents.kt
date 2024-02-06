@@ -101,7 +101,7 @@ fun ExperienceCardList(experiences: List<Experience>, modifier: Modifier = Modif
  */
 @Composable
 fun ExperienceColumn(modifier: Modifier = Modifier, content: @Composable () -> Unit) {
-    Column(modifier = modifier) {
+    Column(modifier = modifier, horizontalAlignment = Alignment.CenterHorizontally) {
         content()
     }
 }

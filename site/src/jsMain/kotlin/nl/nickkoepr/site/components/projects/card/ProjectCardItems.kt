@@ -28,8 +28,8 @@ import org.jetbrains.compose.web.dom.Text
 @Composable
 fun ProjectList(projects: List<Project>, modifier: Modifier = Modifier) {
     Column(modifier = modifier, horizontalAlignment = Alignment.CenterHorizontally) {
-        projects.forEach { project ->
-            ProjectCard(project, modifier = Modifier.padding { bottom(30.px) })
+        projects.forEachIndexed { index, project ->
+            ProjectCard(project, modifier = Modifier.padding { if (index < projects.size - 1) bottom(30.px) })
         }
     }
 }

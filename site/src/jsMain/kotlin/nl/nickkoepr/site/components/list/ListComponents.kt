@@ -56,3 +56,23 @@ fun HorizontalLi(modifier: Modifier = Modifier, content: @Composable () -> Unit)
         content()
     }
 }
+
+@Composable
+fun VerticalUl(modifier: Modifier = Modifier, content: @Composable () -> Unit) {
+    Ul(attrs = HorizontalUlStyle.toModifier().then(modifier).toAttrs()) {
+        content()
+    }
+}
+
+val VerticalLiStyle by ComponentStyle {
+    base {
+        Modifier.display(DisplayStyle.Block)
+    }
+}
+
+@Composable
+fun VerticalLi(modifier: Modifier = Modifier, content: @Composable () -> Unit) {
+    Li(attrs = VerticalLiStyle.toModifier().then(modifier).toAttrs()) {
+        content()
+    }
+}

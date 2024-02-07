@@ -8,7 +8,7 @@ plugins {
 }
 
 group = "nl.nickkoepr.site"
-version = "1.0-SNAPSHOT"
+version = "1.0"
 
 kobweb {
     app {
@@ -18,7 +18,7 @@ kobweb {
                 link(rel = "stylesheet", href = "/fonts/faces.css")
             }
 
-            description.set("Powered by Kobweb")
+            description.set("Hello! I am Nick Kuiper. Software developer mostly interested in Android and backend development")
         }
     }
 }

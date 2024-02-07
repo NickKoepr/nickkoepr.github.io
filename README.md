@@ -8,7 +8,7 @@ KobWeb enables the ability to build websites with composable functions fully in 
 
 ### Icons
 * [Simple Icons](https://simpleicons.org/) 
-* [iconoir](https://iconoir.com/).
+* [iconoir](https://iconoir.com/)
 
 ### Fonts
 [Source Code Pro](https://fonts.google.com/specimen/Source+Code+Pro?query=source+code) 

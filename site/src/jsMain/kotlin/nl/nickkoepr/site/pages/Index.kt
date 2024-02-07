@@ -9,6 +9,9 @@ import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.core.Page
 import com.varabyte.kobweb.silk.components.style.ComponentStyle
 import com.varabyte.kobweb.silk.components.style.toModifier
+import nl.nickkoepr.site.components.contacts.ContactColumn
+import nl.nickkoepr.site.components.contacts.ContactLink
+import nl.nickkoepr.site.components.contacts.ContactLinkList
 import nl.nickkoepr.site.components.experience.ExperienceCardList
 import nl.nickkoepr.site.components.experience.ExperienceColumn
 import nl.nickkoepr.site.components.link.LinkWithIconList
@@ -161,6 +164,24 @@ fun HomePage(modifier: Modifier = RootStyle.toModifier()) {
                                 link = "https://docs.google.com/document/d/e/2PACX-1vQQ0nMg0msUX2CCxmj47ZDYRU4SMfCf0R7hoF61N_3vfKAmJyUw7uQUe90Jfz8e613xogqsvrUKYp91/pub"
                             )
                         }
+                    )
+                ))
+            }
+
+            ContactColumn {
+                SectionTitle("Contact")
+                ContactLinkList(linkWithIcons = listOf(
+                    LinkWithIcon(
+                        iconLocation = "/icons/linkedin.svg",
+                        iconAlt = "Linkedin",
+                        linkText = "Nick Kuiper",
+                        link = "https://www.linkedin.com/in/nick-kuiper-010b75266/"
+                    ),
+                    LinkWithIcon(
+                        iconLocation = "/icons/mail.svg",
+                        iconAlt = "Email",
+                        linkText = "nickkoepr@duck.com",
+                        link = "mailto:nickkoepr@duck.com"
                     )
                 ))
             }

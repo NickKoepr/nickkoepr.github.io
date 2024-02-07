@@ -3,14 +3,12 @@ package nl.nickkoepr.site.components.link
 import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.compose.css.TextDecorationLine
 import com.varabyte.kobweb.compose.css.ariaLabel
+import com.varabyte.kobweb.compose.css.role
 import com.varabyte.kobweb.compose.foundation.layout.Arrangement
 import com.varabyte.kobweb.compose.foundation.layout.Box
 import com.varabyte.kobweb.compose.foundation.layout.Row
 import com.varabyte.kobweb.compose.ui.Modifier
-import com.varabyte.kobweb.compose.ui.modifiers.ariaHidden
-import com.varabyte.kobweb.compose.ui.modifiers.color
-import com.varabyte.kobweb.compose.ui.modifiers.margin
-import com.varabyte.kobweb.compose.ui.modifiers.textDecorationLine
+import com.varabyte.kobweb.compose.ui.modifiers.*
 import com.varabyte.kobweb.silk.components.graphics.Image
 import com.varabyte.kobweb.silk.components.style.ComponentStyle
 import com.varabyte.kobweb.silk.components.style.toAttrs
@@ -52,10 +50,11 @@ fun DefaultLink(
         A(attrs = DefaultLinkStyle.toAttrs {
             if (openNewWindow) target(ATarget.Blank)
 
-
             linkAltText?.let {label ->
                 ariaLabel(label)
             }
+
+            role("link")
         }, href = link) {
             Row {
                 LinkBracket("(")

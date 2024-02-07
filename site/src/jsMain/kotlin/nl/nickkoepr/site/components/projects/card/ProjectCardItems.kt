@@ -12,6 +12,7 @@ import com.varabyte.kobweb.silk.components.graphics.Image
 import com.varabyte.kobweb.silk.components.style.ComponentStyle
 import com.varabyte.kobweb.silk.components.style.toModifier
 import nl.nickkoepr.site.components.link.DefaultLink
+import nl.nickkoepr.site.components.list.VerticalLi
 import nl.nickkoepr.site.domain.project.Project
 import nl.nickkoepr.site.domain.project.ProjectLinkScope
 import org.jetbrains.compose.web.css.px
@@ -43,13 +44,15 @@ fun ProjectList(projects: List<Project>, modifier: Modifier = Modifier) {
 @Composable
 fun ProjectCard(project: Project, modifier: Modifier = Modifier) {
     project.run {
-        Column(modifier = modifier.id(projectTitle), horizontalAlignment = Alignment.CenterHorizontally) {
-            projectImageLocation?.let { ProjectCardImage(it, modifier = Modifier.padding { top(20.px) }) }
-            ProjectCardTitle(projectTitle, modifier = Modifier.padding {
-                top(20.px)
-            })
-            ProjectCardDescription(projectDescription)
-            ProjectLinkScope.projectLinks()
+        VerticalLi(modifier = modifier.id(projectTitle)) {
+            Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                projectImageLocation?.let { ProjectCardImage(it, modifier = Modifier.padding { top(20.px) }) }
+                ProjectCardTitle(projectTitle, modifier = Modifier.padding {
+                    top(20.px)
+                })
+                ProjectCardDescription(projectDescription)
+                ProjectLinkScope.projectLinks()
+            }
         }
     }
 }

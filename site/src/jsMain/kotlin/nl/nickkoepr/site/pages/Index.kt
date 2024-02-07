@@ -201,12 +201,14 @@ fun HomePage(modifier: Modifier = RootStyle.toModifier()) {
                         Text("Used$SPACE")
                         DefaultLink(
                             linkText = "Simple icons",
-                            link = ""
+                            link = "https://simpleicons.org/",
+                            openNewWindow = true
                         )
                         Text("${SPACE}and$SPACE")
                         DefaultLink(
                             linkText = "Iconair",
-                            link = ""
+                            link = "https://iconoir.com/",
+                            openNewWindow = true
                         )
                         Text("${SPACE}for the icons =D")
                     }

@@ -2,9 +2,9 @@ package nl.nickkoepr.site.components.projects
 
 import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.compose.foundation.layout.Column
-import com.varabyte.kobweb.compose.ui.Alignment
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.id
+import nl.nickkoepr.site.components.list.VerticalUl
 
 /**
  * [Column] for project items.
@@ -13,7 +13,7 @@ import com.varabyte.kobweb.compose.ui.modifiers.id
  */
 @Composable
 fun ProjectsColumn(modifier: Modifier = Modifier, content: @Composable () -> Unit) {
-    Column(modifier = modifier.id("projects"), horizontalAlignment = Alignment.CenterHorizontally) {
+    VerticalUl(modifier.id("projects")) {
         content()
     }
 }

@@ -168,7 +168,7 @@ fun HomePage(modifier: Modifier = RootStyle.toModifier()) {
                 ))
             }
 
-            ContactColumn {
+            ContactColumn(modifier = Modifier.padding { top(30.px) }) {
                 SectionTitle("Contact")
                 ContactLinkList(linkWithIcons = listOf(
                     LinkWithIcon(

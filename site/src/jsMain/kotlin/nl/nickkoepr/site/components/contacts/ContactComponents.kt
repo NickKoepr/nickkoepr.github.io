@@ -11,6 +11,11 @@ import nl.nickkoepr.site.components.list.VerticalUl
 import nl.nickkoepr.site.domain.link.LinkWithIcon
 import org.jetbrains.compose.web.css.px
 
+/**
+ * [Column] for contact items.
+ *
+ * @param content the content that has to be displayed into the column.
+ */
 @Composable
 fun ContactColumn(modifier: Modifier = Modifier, content: @Composable () -> Unit) {
     Column(modifier = modifier, horizontalAlignment = Alignment.CenterHorizontally) {
@@ -18,6 +23,11 @@ fun ContactColumn(modifier: Modifier = Modifier, content: @Composable () -> Unit
     }
 }
 
+/**
+ * Create a [VerticalUl] list with the given [linkWithIcons]. These will be rendered with the [ContactLink] composable.
+ *
+ * @param linkWithIcons list with [LinkWithIcon] objects.
+ */
 @Composable
 fun ContactLinkList(linkWithIcons: List<LinkWithIcon>, modifier: Modifier = Modifier) {
     VerticalUl(modifier = modifier) {
@@ -29,9 +39,12 @@ fun ContactLinkList(linkWithIcons: List<LinkWithIcon>, modifier: Modifier = Modi
     }
 }
 
+/**
+ * [LinkWithIcon] for a given [LinkWithIcon].
+ *
+ * @param linkWithIcon [LinkWithIcon] object.
+ */
 @Composable
 fun ContactLink(linkWithIcon: LinkWithIcon, modifier: Modifier = Modifier) {
-    Column(horizontalAlignment = Alignment.CenterHorizontally) {
-        LinkWithIconItem(linkWithIcon = linkWithIcon, modifier = modifier.padding { bottom(9.px) })
-    }
+    LinkWithIconItem(linkWithIcon = linkWithIcon, modifier = modifier.padding { bottom(9.px) })
 }

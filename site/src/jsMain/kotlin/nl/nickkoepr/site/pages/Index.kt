@@ -10,10 +10,14 @@ import com.varabyte.kobweb.core.Page
 import com.varabyte.kobweb.silk.components.style.ComponentStyle
 import com.varabyte.kobweb.silk.components.style.toModifier
 import nl.nickkoepr.site.components.contacts.ContactColumn
-import nl.nickkoepr.site.components.contacts.ContactLink
 import nl.nickkoepr.site.components.contacts.ContactLinkList
 import nl.nickkoepr.site.components.experience.ExperienceCardList
 import nl.nickkoepr.site.components.experience.ExperienceColumn
+import nl.nickkoepr.site.components.footer.CopyrightText
+import nl.nickkoepr.site.components.footer.FooterColumn
+import nl.nickkoepr.site.components.footer.SPACE
+import nl.nickkoepr.site.components.footer.SmallFooterText
+import nl.nickkoepr.site.components.link.DefaultLink
 import nl.nickkoepr.site.components.link.LinkWithIconList
 import nl.nickkoepr.site.components.navigation.NavigationBar
 import nl.nickkoepr.site.components.projects.ProjectsColumn
@@ -35,8 +39,11 @@ import nl.nickkoepr.site.styling.backgroundColor
 import nl.nickkoepr.site.styling.fontColor
 import nl.nickkoepr.site.styling.fontFamily
 import org.jetbrains.compose.web.css.px
+import org.jetbrains.compose.web.dom.Footer
 import org.jetbrains.compose.web.dom.Header
 import org.jetbrains.compose.web.dom.Main
+import org.jetbrains.compose.web.dom.Text
+import kotlin.js.Date
 
 val HomePageStyle by ComponentStyle {
     base {
@@ -141,8 +148,7 @@ fun HomePage(modifier: Modifier = RootStyle.toModifier()) {
                                 link = "https://github.com/NickKoepr/Bored"
                             )
                         }
-                    )
-                    ,Project(
+                    ), Project(
                         projectImageLocation = "/images/projects/tictactoe_logo.jpg",
                         projectTitle = "TicTacToe",
                         projectDescription = "Play Tic Tac Toe with your friends on Discord with the TicTacToe Discord bot!",
@@ -170,20 +176,41 @@ fun HomePage(modifier: Modifier = RootStyle.toModifier()) {
 
             ContactColumn(modifier = Modifier.padding { top(30.px) }) {
                 SectionTitle("Contact")
-                ContactLinkList(linkWithIcons = listOf(
-                    LinkWithIcon(
-                        iconLocation = "/icons/linkedin.svg",
-                        iconAlt = "Linkedin",
-                        linkText = "Nick Kuiper",
-                        link = "https://www.linkedin.com/in/nick-kuiper-010b75266/"
-                    ),
-                    LinkWithIcon(
-                        iconLocation = "/icons/mail.svg",
-                        iconAlt = "Email",
-                        linkText = "nickkoepr@duck.com",
-                        link = "mailto:nickkoepr@duck.com"
+                ContactLinkList(
+                    linkWithIcons = listOf(
+                        LinkWithIcon(
+                            iconLocation = "/icons/linkedin.svg",
+                            iconAlt = "Linkedin",
+                            linkText = "Nick Kuiper",
+                            link = "https://www.linkedin.com/in/nick-kuiper-010b75266/"
+                        ),
+                        LinkWithIcon(
+                            iconLocation = "/icons/mail.svg",
+                            iconAlt = "Email",
+                            linkText = "nickkoepr@duck.com",
+                            link = "mailto:nickkoepr@duck.com"
+                        )
                     )
-                ))
+                )
+            }
+
+            Footer {
+                FooterColumn(modifier = Modifier.padding { top(30.px) }) {
+                    CopyrightText("© ${Date().getFullYear()} NickKoepr")
+                    SmallFooterText {
+                        Text("Used$SPACE")
+                        DefaultLink(
+                            linkText = "Simple icons",
+                            link = ""
+                        )
+                        Text("${SPACE}and$SPACE")
+                        DefaultLink(
+                            linkText = "Iconair",
+                            link = ""
+                        )
+                        Text("${SPACE}for the icons =D")
+                    }
+                }
             }
         }
     }

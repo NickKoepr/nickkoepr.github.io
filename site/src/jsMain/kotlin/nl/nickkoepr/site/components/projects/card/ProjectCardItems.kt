@@ -13,6 +13,7 @@ import com.varabyte.kobweb.silk.components.style.ComponentStyle
 import com.varabyte.kobweb.silk.components.style.toModifier
 import nl.nickkoepr.site.components.link.DefaultLink
 import nl.nickkoepr.site.components.list.VerticalLi
+import nl.nickkoepr.site.components.list.VerticalUl
 import nl.nickkoepr.site.domain.project.Project
 import nl.nickkoepr.site.domain.project.ProjectLinkScope
 import org.jetbrains.compose.web.css.px
@@ -29,8 +30,10 @@ import org.jetbrains.compose.web.dom.Text
 @Composable
 fun ProjectList(projects: List<Project>, modifier: Modifier = Modifier) {
     Column(modifier = modifier, horizontalAlignment = Alignment.CenterHorizontally) {
-        projects.forEachIndexed { index, project ->
-            ProjectCard(project, modifier = Modifier.padding { if (index < projects.size - 1) bottom(30.px) })
+        VerticalUl {
+            projects.forEachIndexed { index, project ->
+                ProjectCard(project, modifier = Modifier.padding { if (index < projects.size - 1) bottom(30.px) })
+            }
         }
     }
 }

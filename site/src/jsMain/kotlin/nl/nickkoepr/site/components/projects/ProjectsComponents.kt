@@ -4,7 +4,8 @@ import androidx.compose.runtime.Composable
 import com.varabyte.kobweb.compose.foundation.layout.Column
 import com.varabyte.kobweb.compose.ui.Modifier
 import com.varabyte.kobweb.compose.ui.modifiers.id
-import nl.nickkoepr.site.components.list.VerticalUl
+import com.varabyte.kobweb.compose.ui.toAttrs
+import org.jetbrains.compose.web.dom.Div
 
 /**
  * [Column] for project items.
@@ -13,7 +14,7 @@ import nl.nickkoepr.site.components.list.VerticalUl
  */
 @Composable
 fun ProjectsColumn(modifier: Modifier = Modifier, content: @Composable () -> Unit) {
-    VerticalUl(modifier.id("projects")) {
+    Div(attrs = modifier.id("projects").toAttrs()) {
         content()
     }
 }

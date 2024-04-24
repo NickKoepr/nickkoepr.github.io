@@ -193,25 +193,24 @@ fun HomePage(modifier: Modifier = RootStyle.toModifier()) {
                     )
                 )
             }
-
-            Footer {
-                FooterColumn(modifier = Modifier.padding { top(30.px) }) {
-                    CopyrightText("© ${Date().getFullYear()} NickKoepr")
-                    SmallFooterText {
-                        Text("Used$SPACE")
-                        DefaultLink(
-                            linkText = "Simple icons",
-                            link = "https://simpleicons.org/",
-                            openNewWindow = true
-                        )
-                        Text("${SPACE}and$SPACE")
-                        DefaultLink(
-                            linkText = "Iconair",
-                            link = "https://iconoir.com/",
-                            openNewWindow = true
-                        )
-                        Text("${SPACE}for the icons =D")
-                    }
+        }
+        Footer {
+            FooterColumn(modifier = Modifier.padding { top(30.px) }) {
+                CopyrightText("© ${Date().getFullYear()} NickKoepr")
+                SmallFooterText {
+                    Text("Used$SPACE")
+                    DefaultLink(
+                        linkText = "Simple icons",
+                        link = "https://simpleicons.org/",
+                        openNewWindow = true
+                    )
+                    Text("${SPACE}and$SPACE")
+                    DefaultLink(
+                        linkText = "Iconair",
+                        link = "https://iconoir.com/",
+                        openNewWindow = true
+                    )
+                    Text("${SPACE}for the icons =D")
                 }
             }
         }

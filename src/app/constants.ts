@@ -4,12 +4,32 @@ import type { Project } from "./components/tile/ProjectTile";
 
 export const experiences: Experience[] = [
   {
-    experienceTitle: "Gradle",
-    imageLocation: "gradle.svg"
+    experienceTitle: "Kotlin",
+    imageLocation: "kotlin.svg"
+  },
+  {
+    experienceTitle: "Jetpack Compose",
+    imageLocation: "jetpackcompose.svg"
   },
   {
     experienceTitle: "Android Studio",
     imageLocation: "androidstudio.svg"
+  },
+  {
+    experienceTitle: "Gradle",
+    imageLocation: "gradle.svg"
+  },
+  {
+    experienceTitle: "React",
+    imageLocation: "react.svg"
+  },
+  {
+    experienceTitle: "TypeScript",
+    imageLocation: "typescript.svg"
+  },
+  {
+    experienceTitle: "Java",
+    imageLocation: "java.svg"
   },
   {
     experienceTitle: "Figma",
@@ -28,28 +48,12 @@ export const experiences: Experience[] = [
     imageLocation: "javascript.svg"
   },
   {
-    experienceTitle: "Jetpack Compose",
-    imageLocation: "jetpackcompose.svg"
-  },
-  {
-    experienceTitle: "Kotlin",
-    imageLocation: "kotlin.svg"
-  },
-  {
     experienceTitle: "Postgres",
     imageLocation: "postgresql.svg"
   },
   {
     experienceTitle: "Python",
     imageLocation: "python.svg"
-  },
-  {
-    experienceTitle: "React",
-    imageLocation: "react.svg"
-  },
-  {
-    experienceTitle: "TypeScript",
-    imageLocation: "typescript.svg"
   }
 ]
 

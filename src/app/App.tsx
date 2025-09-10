@@ -15,7 +15,7 @@ function App() {
         <VerticalSpacer height={130} />
 
         <SiteTitle title="Hi, I am Nick" />
-        <SubTitle text="Backend developer student" />
+        <SubTitle text="Software developer student" />
 
         <VerticalSpacer height={30} />
 
@@ -31,7 +31,7 @@ function App() {
           ))}
         </div>
 
-        <VerticalSpacer height={105} />
+        <VerticalSpacer height={100} />
 
         <SegmentTitle title="Experience with" />
 
@@ -43,7 +43,7 @@ function App() {
             justifyContent: "center",
             flexWrap: "wrap",
             gap: "25px",
-            padding: "0px 30px 0px 30px",
+            padding: "0px 100px 0px 100px",
           }}
         >
           {experiences.map((experience) => (

@@ -10,7 +10,7 @@ export default function SubTitle({ text }: SubTitleProps) {
           textAlign: "center",
           color: "var(--subtitle-color)",
           fontSize: "30px",
-          marginTop: "-10px",
+          marginTop: "-5px",
         }}
         className="font-medium"
       >

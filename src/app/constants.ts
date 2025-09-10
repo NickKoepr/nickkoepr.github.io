@@ -1,3 +1,4 @@
+import type { IconButton } from "./components/button/IconButton";
 import type { Experience } from "./components/tile/ExperienceTile";
 import type { Project } from "./components/tile/ProjectTile";
 
@@ -111,5 +112,23 @@ export const projects: Project[] = [
             urlToOpen: "https://github.com/NickKoepr/Bored"
         }
       ]
+  }
+]
+
+export const profileButtons: IconButton[] = [
+  {
+      iconName: "LinkedIn",
+      iconLocation: "linkedin.svg",
+      iconButtonLink: "https://www.linkedin.com/in/nick-kuiper-010b75266/"
+  },
+  {
+      iconName: "GitHub",
+      iconLocation: "github.svg",
+      iconButtonLink: "https://github.com/NickKoepr"
+  },
+  {
+      iconName: "Mail",
+      iconLocation: "mail.svg",
+      iconButtonLink: "mailto:nickkoepr@duck.com"
   }
 ]

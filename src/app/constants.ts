@@ -1,4 +1,5 @@
 import type { Experience } from "./components/tile/ExperienceTile";
+import type { Project } from "./components/tile/ProjectTile";
 
 export const experiences: Experience[] = [
   {
@@ -48,5 +49,67 @@ export const experiences: Experience[] = [
   {
     experienceTitle: "TypeScript",
     imageLocation: "typescript.svg"
+  }
+]
+
+export const projects: Project[] = [
+  {
+      title: "TicTacToe",
+      subtitle: "Play TicTacToe on Discord!",
+      description: "With TicTacToe, Discord users can play a simple game of tic tac toe with each other.",
+      imageLocation: "tictactoe.svg",
+      buttonBackgroundColor: "ttt-button-color",
+      buttonBorderColor: "ttt-button-border-color",
+      buttonTextColor: "ttt-button-text-color",
+      tools: [
+        {
+          toolName: "Python",
+          imageLocation: "python.svg"
+        },
+      ],
+      buttons: [
+        {
+            label: "Invite the bot",
+            urlToOpen: "https://discord.com/discovery/applications/914110118998732811"
+        },
+        {
+            label: "Website",
+            urlToOpen: "https://tictactoe.nickkoepr.nl/"
+        },
+        {
+            label: "Repository",
+            urlToOpen: "https://github.com/NickKoepr/TicTacToe"
+        }
+      ]
+  },
+
+  {
+      title: "Bored",
+      subtitle: "App to combat boredom.",
+      description: "An Android app that gives suggestions to combat boredom.",
+      imageLocation: "bored.png",
+      buttonBackgroundColor: "bored-button-color",
+      buttonBorderColor: "bored-button-border-color",
+      buttonTextColor: "bored-button-text-color",
+      tools: [
+        {
+          toolName: "Android Studio",
+          imageLocation: "androidstudio.svg"
+        },
+        {
+          toolName: "Kotlin",
+          imageLocation: "kotlin.svg"
+        },
+        {
+          toolName: "Jetpack Compose",
+          imageLocation: "jetpackcompose.svg"
+        },
+      ],
+      buttons: [
+        {
+            label: "Repository",
+            urlToOpen: "https://github.com/NickKoepr/Bored"
+        }
+      ]
   }
 ]

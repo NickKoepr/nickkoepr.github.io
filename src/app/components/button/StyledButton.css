@@ -1,9 +1,6 @@
 .styled-button {
     padding: 6px 25px 6px 25px;
     border-radius: 10px;
-    background-color: var(--ttt-button-color);
-    color: var(--ttt-button-text-color);
-    border: 4px solid var(--ttt-button-border-color);
     transition: 0.4s;
 }
 

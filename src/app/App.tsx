@@ -5,7 +5,7 @@ import ProjectTile from "./components/tile/ProjectTile";
 import SegmentTitle from "./components/title/SegmentTitle";
 import SiteTitle from "./components/title/SiteTitle";
 import SubTitle from "./components/title/SubTitle";
-import { experiences } from "./constants";
+import { experiences, projects } from "./constants";
 
 function App() {
   return (
@@ -50,9 +50,9 @@ function App() {
             gap: "20px",
           }}
         >
-          <ProjectTile />
-          <ProjectTile />
-          <ProjectTile />
+          {projects.map((project) => (
+            <ProjectTile project={project} />
+          ))}
         </div>
       </div>
     </>

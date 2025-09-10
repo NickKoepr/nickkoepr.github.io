@@ -19,9 +19,11 @@ body {
 
     --ttt-button-color: #00a5a6;
     --ttt-button-border-color: #009a9b;
-    --ttt-button-hover-color: #008182;
-    --ttt-button-border-hover-color: #00c8c9;
     --ttt-button-text-color: #ffffff;
+
+    --bored-button-color: #5b7553;
+    --bored-button-border-color: #53684c;
+    --bored-button-text-color: #ffffff;
 
     --outline-color: #e3e3e3;
 }

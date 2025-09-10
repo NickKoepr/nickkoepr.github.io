@@ -6,7 +6,7 @@
 
 .styled-button:hover {
     opacity: 0.8;
-    /*border-color: var(--ttt-button-hover-color);*/
+    cursor: pointer;
 }
 
 .styled-button:active {

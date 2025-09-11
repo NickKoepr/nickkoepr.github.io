@@ -37,15 +37,7 @@ function App() {
 
         <VerticalSpacer height={40} />
 
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            flexWrap: "wrap",
-            gap: "25px",
-            padding: "0px 100px 0px 100px",
-          }}
-        >
+        <div className="experiences">
           {experiences.map((experience) => (
             <ExperienceTile experience={experience} />
           ))}

@@ -14,6 +14,11 @@
     margin-right: 10px;
 }
 
+.project-card-info {
+    display: flex;
+    flex-direction: row;
+}
+
 .project-row {
     display: flex;
     flex-direction: row;
@@ -72,4 +77,41 @@
 .project-detail-buttons {
     display: flex;
     gap: 15px;
+}
+
+.project-image {
+    height: 110px;
+    border-radius: 30px;
+}
+
+@media only screen and (max-width: 790px) {
+    .project-tile {
+        width: 300px;
+    }
+
+    .project-row {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .project-info {
+        padding-right: 0px;
+        padding-left: 10px;
+    }
+
+    .project-image {
+        height: 80px;
+        border-radius: 20px;
+    }
+
+    .project-subtitle {
+        font-size: 20px;
+        width: 100%;
+    }
+
+    .project-detail-buttons {
+        flex-direction: column;
+        padding: 0px 40px 0px 40px;
+        gap: 15px;
+    }
 }

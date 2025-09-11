@@ -36,17 +36,14 @@ export default function ProjectTile({ project }: ProjectTileProps) {
     <>
       <div className="project-tile" ref={reference}>
         <div className="project-row">
-          <img
-            style={{
-              height: "110px",
-              borderRadius: "30px",
-            }}
-            src={project.imageLocation}
-            alt=""
-          />
-          <div className="project-info">
-            <h3 className="font-bold project-title">{project.title}</h3>
-            <p className="font-regular project-subtitle">{project.subtitle}</p>
+          <div className="project-card-info">
+            <img className="project-image" src={project.imageLocation} alt="" />
+            <div className="project-info">
+              <h3 className="font-bold project-title">{project.title}</h3>
+              <p className="font-regular project-subtitle">
+                {project.subtitle}
+              </p>
+            </div>
           </div>
 
           <div className="project-button">

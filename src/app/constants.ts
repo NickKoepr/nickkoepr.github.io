@@ -133,6 +133,6 @@ export const profileButtons: IconButton[] = [
   {
       iconName: "Mail",
       iconLocation: "mail.svg",
-      iconButtonLink: "mailto:nickkoepr@duck.com"
+      iconButtonLink: "mailto:nick@koepr.com"
   }
 ]

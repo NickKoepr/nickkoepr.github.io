@@ -20,7 +20,7 @@ export const experiences: Experience[] = [
     imageLocation: "gradle.svg"
   },
   {
-    experienceTitle: "React",
+    experienceTitle: "React Native",
     imageLocation: "react.svg"
   },
   {
@@ -59,6 +59,35 @@ export const experiences: Experience[] = [
 
 export const projects: Project[] = [
   {
+      title: "Vinkly",
+      subtitle: "Your daily routine checklist",
+      description: "An Android and iOS app to create smart checklists for your daily routines.",
+      imageLocation: "vinkly.png",
+      buttonBackgroundColor: "vinkly-button-color",
+      buttonBorderColor: "vinkly-button-border-color",
+      buttonTextColor: "vinkly-button-text-color",
+      tools: [
+        {
+          toolName: "React Native",
+          imageLocation: "react.svg"
+        },
+        {
+          toolName: "Typescript",
+          imageLocation: "typescript.svg"
+        },
+      ],
+      buttons: [
+        {
+            label: "App Store",
+            urlToOpen: "https://apps.apple.com/nl/app/vinkly/id6762151253"
+        },
+        {
+            label: "Play Store (SOON)",
+            urlToOpen: ""
+        }
+      ]
+  },
+  {
       title: "TicTacToe",
       subtitle: "Play TicTacToe on Discord!",
       description: "With TicTacToe, Discord users can play a simple game of tic tac toe with each other.",
@@ -96,6 +125,7 @@ export const projects: Project[] = [
       buttonBackgroundColor: "bored-button-color",
       buttonBorderColor: "bored-button-border-color",
       buttonTextColor: "bored-button-text-color",
+      addBorderRadius: true,
       tools: [
         {
           toolName: "Android Studio",
@@ -123,7 +153,7 @@ export const profileButtons: IconButton[] = [
   {
       iconName: "LinkedIn",
       iconLocation: "linkedin.svg",
-      iconButtonLink: "https://www.linkedin.com/in/nick-kuiper-010b75266/"
+      iconButtonLink: "https://www.linkedin.com/in/nick-kuiper-010b75266"
   },
   {
       iconName: "GitHub",

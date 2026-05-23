@@ -10,6 +10,7 @@ export type Project = {
   buttonBackgroundColor: string;
   buttonBorderColor: string;
   buttonTextColor: string;
+  addBorderRadius?: boolean;
   tools: { toolName: string; imageLocation: string }[];
   buttons: { label: string; urlToOpen: string }[];
 };
@@ -37,7 +38,12 @@ export default function ProjectTile({ project }: ProjectTileProps) {
       <div className="project-tile" ref={reference}>
         <div className="project-row">
           <div className="project-card-info">
-            <img className="project-image" src={project.imageLocation} alt="" />
+            <img
+              className="project-image"
+              src={project.imageLocation}
+              alt=""
+              style={project.addBorderRadius ? { borderRadius: "30px" } : {}}
+            />
             <div className="project-info">
               <h3 className="font-bold project-title">{project.title}</h3>
               <p className="font-regular project-subtitle">

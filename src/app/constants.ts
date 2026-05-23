@@ -76,7 +76,11 @@ export const projects: Project[] = [
           imageLocation: "typescript.svg"
         },
       ],
-      buttons: [
+    buttons: [
+        {
+          label: "Website",
+          urlToOpen: "https://vinkly.koepr.com"
+        },
         {
             label: "App Store",
             urlToOpen: "https://apps.apple.com/nl/app/vinkly/id6762151253"

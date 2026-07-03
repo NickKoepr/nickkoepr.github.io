@@ -15,7 +15,7 @@ function App() {
         <VerticalSpacer height={130} />
 
         <SiteTitle title="Hi, I am Nick" />
-        <SubTitle text="Software developer student" />
+        <SubTitle text="App Developer @ Efteling" />
 
         <VerticalSpacer height={30} />
 
